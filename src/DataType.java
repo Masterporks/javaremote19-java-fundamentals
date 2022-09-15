@@ -12,13 +12,15 @@ public class DataType {
     long longNumber=6453738833L;
     short shortNumber = -15387;
     float decimalNumber = 2.475453334366443f;
+    double doubleNumber = 4,356d;
 
 //Character
 
-char alpha = 'F';
+char alpha = 'F';  //single alphabet
+
 
 //True/False
-    boolean hadlunch = true; //had lunch
+    boolean hadlunch = true; //had lunch?
     boolean isHoliday = false;
 
     /* Multi-line
@@ -44,7 +46,7 @@ int numberOne, numberTwo, numberThree;
 String fruit = "apple", vegetable ="pumpkin";
 
 
-private static String Car = "Toyota";
+private static final String Car = "Toyota";
 public static String Food = "Cake";
 
 
@@ -52,6 +54,7 @@ public static String Food = "Cake";
         int k = 0;
         Integer y = null;
         System.out.println(k);
+
         System.out.println(y);
 
 String _color = "black";

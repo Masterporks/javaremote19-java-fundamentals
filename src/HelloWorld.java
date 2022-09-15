@@ -5,8 +5,8 @@
         */
 public class HelloWorld {
 
-    public static void main(String[] args) {
-        System.out.println("HelloWorld!");
+    public static void main(String[] args) {  //psva
+        System.out.println("HelloWorld!");    //sout
 
 
         System.out.println(DataType.Food);
