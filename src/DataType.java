@@ -12,7 +12,7 @@ public class DataType {
     long longNumber=6453738833L;
     short shortNumber = -15387;
     float decimalNumber = 2.475453334366443f;
-    double doubleNumber = 4,356d;
+    double doubleNumber = 4.356d;
 
 //Character
 
