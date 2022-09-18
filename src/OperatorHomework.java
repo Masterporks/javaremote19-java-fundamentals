@@ -1,13 +1,14 @@
 /**
+ * Examples of Primitive datatype
  *
+ * @author Joosep Korela
  */
-
 public class OperatorHomework {
 
     public static void main(String[] args) {
         int i = 9;
         int a = 18;
-        int result = // your expression here
+        int result  = a + i; // your expression here
 
         /*
         1.
@@ -22,7 +23,6 @@ public class OperatorHomework {
 
          */
 
+
     }
-
-
 }
