@@ -1,3 +1,5 @@
+import java.math.BigDecimal;
+
 /**
  ** The first Homework on Operators
  *
@@ -19,10 +21,12 @@ public class OperatorHomework {
         1. First  i will calculate the brackets (c / d + a)
         2. Inside brackets the first move is c / d and then we add int a // (64 / 4) = 16 + 18 = 34
         3. Next we sum up i % d with bracket  (34)+ 9 % 4  // 34 + 1 = 35
-        4. Next we calculate left to right  18 - 7 + 35= 46
-        5.
+        4. Next 7 + 35= 42
+        5. Next  a - 42  //18- 42 = -24
 
          */
+
+        float t = -1.54345677658484756658f;
         System.out.println(result);
 
     }
