@@ -53,10 +53,10 @@ public class StatementExercises {
         if (j % 3 == 0 && j % 5 == 0) {
             System.out.println("FIZZBUZZ");
 
-        } else if(j % 3 == 0) {
+        } else if (j % 3 == 0) {
             System.out.println("FIZZ");
 
-        } else if(j % 5 == 0) {
+        } else if (j % 5 == 0) {
             System.out.println("BUZZ");
 
 
@@ -66,8 +66,6 @@ public class StatementExercises {
         //Homework: one line solution for FIZZBUZZ
 
 
-        System.out.println( ((j % 3 == 0 && j % 5 == 0 ||(j % 3 == 0 && j % 5 == 0) ) ? "FIZZBUZZ " : "BUZZ" ));
+        System.out.println((j % 3 == 0 && j % 5 == 0 ? "FizzBuzz" : j % 3 == 0 ? "Fizz" : j % 5 == 0 ? "Buzz" : j + ""));
     }
-
-
 }
