@@ -1,4 +1,4 @@
-import java.math.BigDecimal;
+package homeworks;
 
 /**
  ** The first Homework on Operators

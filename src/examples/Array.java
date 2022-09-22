@@ -1,3 +1,5 @@
+package examples;
+
 /**
  * Examples of Arrays
  *
@@ -11,7 +13,7 @@ public class Array {
 
         int a = 9;
         //Single-dimensional array
-        //Note: Array index always starts with 0
+        //Note: examples.Array index always starts with 0
         //int array
         int[] b = {9, 27, 40, 20, 839, 11000};
 
@@ -24,7 +26,7 @@ public class Array {
 
         System.out.println(fruits[0]);  //apple
         System.out.println(b[4]);
-        // System.out.println(fruits[3]); //Array index out of bound
+        // System.out.println(fruits[3]); //examples.Array index out of bound
         System.out.println(b.length);  //return the number of values in the array
         System.out.println(b.length - 1); //returns array's last index
 

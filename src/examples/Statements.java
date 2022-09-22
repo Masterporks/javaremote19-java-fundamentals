@@ -1,5 +1,7 @@
+package examples;
+
 /**
- * Statements examples
+ * examples.Statements examples
  *
  * @author Joosep Korela
  */
