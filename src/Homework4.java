@@ -5,7 +5,7 @@
  * @author Joosep Korela
  */
 
-
+// Homework 4
 public class Homework4 {
     public static void main(String[] args) {
 
@@ -33,8 +33,11 @@ public class Homework4 {
             System.out.println(average);
 
 
-          int[] order = {1, 7, 3 ,10, 9};
+          int[] i = {1, 7, 3 ,10, 9};
+          for (int order = i.length -1 ; order >= 0; order-- ){
+              System.out.println(i[order] + " ");
 
+          }
 
     }
 
