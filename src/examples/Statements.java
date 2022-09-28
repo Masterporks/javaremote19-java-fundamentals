@@ -34,10 +34,10 @@ public class Statements {
         // buy the shirt from another shop
         }
          */
-        if (i > y) {
-            System.out.println("i is greater than y");
+        if (i > y) {   //if , compare, find -  words in exercises , use if
+            System.out.println("i is greater than y");  // if its true then it prints this
         } else {
-            System.out.println("y is greater than i");
+            System.out.println("y is greater than i");  // if this is false it prints this
         }
         /*
         if (shirt size == M && shirt color == black) {
@@ -52,10 +52,9 @@ public class Statements {
         if (i > y) {
             System.out.println("i is greater than y");
 
-
-        } else if (i < 9) {
+        } else if (i < 9) {  // if you have two or more conditions you use this
             System.out.println("i is lesser");
-        } else {
+        } else {  // kirjutatakse viimase reana kui vaja, else if ette ei tohi panna muidu annab errori
             System.out.println("i is invalid");
         }
 
@@ -121,10 +120,10 @@ public class Statements {
         } while(money < 100);
 
         //FOR
+
         for (int g = 0; g <= 6; g++) {
             System.out.println("g value is: " + g);
         }
-
 
 
     }

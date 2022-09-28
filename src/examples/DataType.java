@@ -14,7 +14,7 @@ public class DataType {
     long longNumber=6453738833L;
     short shortNumber = -15387;
     float decimalNumber = 2.475453334366443f;
-    double doubleNumber = 4.356d;
+    double doubleNumber = 4.356d; // can also be 4 or 4.0
 
 //Character
 
@@ -22,7 +22,7 @@ char alpha = 'F';  //single alphabet
 
 
 //True/False
-    boolean hadlunch = true; //had lunch?
+    boolean hadLunch = true; //had lunch? acts as question
     boolean isHoliday = false;
 
     /* Multi-line
@@ -53,6 +53,7 @@ public static String Food = "Cake";
 
 
     public static void main(String[] args) {
+
         int k = 0;
         Integer y = null;
         System.out.println(k);
