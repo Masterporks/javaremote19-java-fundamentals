@@ -3,6 +3,11 @@ package homeworks;
 import java.util.Arrays;
 import java.util.Scanner;
 
+/**
+ * Sum given array
+ *
+ * @author Joosep Korela
+ */
 public class Add {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -14,19 +19,20 @@ public class Add {
         System.out.println("Enter array elements one after an other");
 
         int[] arr = new int[arrLength];
-        int[] add = new int[arrLength];
+
         for(int i = 0; i < arrLength; i++) {
             arr[i] = scanner.nextInt();
         }
 
         System.out.println("Input array is: " + Arrays.toString(arr));
-
-        for(int i = arrLength; i >= 0; i++) {
+        int sum = 0;
+        for(int i = 0; i < arrLength; i++) {
+        sum += arr[i];
 
 
 
         }
-        System.out.println("Add is: " + Arrays.toString(add));
+        System.out.println("Sum is: " +sum);
 
     }
 }
