@@ -1,5 +1,6 @@
 package homeworks;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 /**
@@ -20,12 +21,11 @@ public class IntegerDisplay {
         int arrLength = scanner.nextInt();
         int[] arr = new int[arrLength];
 
-        for (int i = 1; i <= arrLength; i++) {
-            for (int j = 0; j < i; j++) {
+        for (int i = 1; i <= arrLength; i++) {  //To print number of times /lines
+            for (int j = 0; j <= i; j++) {  //To print the number of digits
                 System.out.print(n);
             }
-            System.out.println();
-
+            System.out.print(", ");
 
         }
     }
