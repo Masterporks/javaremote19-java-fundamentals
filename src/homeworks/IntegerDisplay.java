@@ -13,19 +13,20 @@ public class IntegerDisplay {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
-
-        System.out.println("Enter a number");
+        System.out.println("Enter a number: ");
         int n = scanner.nextInt();
 
-        System.out.println("Enter how many time you want to add that number: ");
-        int m = scanner.nextInt();
+        System.out.println("How many times to run: ");
+        int arrLength = scanner.nextInt();
+        int[] arr = new int[arrLength];
+
+        for (int i = 1; i <= arrLength; i++) {
+            for (int j = 0; j < i; j++) {
+                System.out.print(n);
+            }
+            System.out.println();
 
 
-
-
-        System.out.println(m);
-
-
-
+        }
     }
 }
