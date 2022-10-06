@@ -4,11 +4,11 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 /**
- * Subtract given array
+ * Divide given array
  *
  * @author Joosep Korela
  */
-public class Subtract {
+public class Divide1 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
@@ -18,21 +18,21 @@ public class Subtract {
 
         System.out.println("Enter array elements one after an other");
 
-        int[] arr = new int[arrLength];
+        float[] arr = new float[arrLength];
 
         for(int i = 0; i < arrLength; i++) {
             arr[i] = scanner.nextInt();
         }
 
         System.out.println("Input array is: " + Arrays.toString(arr));
-        int subtract = arr[0];
+        float divide = arr[0];
         for(int i = 1; i < arrLength; i++) {
-            subtract = subtract - arr[i];
+            divide = divide / arr[i];
 
 
 
         }
-        System.out.println("Subtract is: " +subtract);
+        System.out.println("Divide is: " +divide);
 
     }
 }

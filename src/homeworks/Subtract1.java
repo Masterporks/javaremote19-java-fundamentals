@@ -4,11 +4,11 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 /**
- * Sum given array
+ * Subtract given array
  *
  * @author Joosep Korela
  */
-public class Add {
+public class Subtract1 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
@@ -25,14 +25,14 @@ public class Add {
         }
 
         System.out.println("Input array is: " + Arrays.toString(arr));
-        int sum = 0;
-        for(int i = 0; i < arrLength; i++) {
-        sum += arr[i];
+        int subtract = arr[0];
+        for(int i = 1; i < arrLength; i++) {
+            subtract = subtract - arr[i];
 
 
 
         }
-        System.out.println("Sum is: " +sum);
+        System.out.println("Subtract is: " +subtract);
 
     }
 }

@@ -8,7 +8,7 @@ import java.util.Scanner;
  *
  * @author Joosep Korela
  */
-public class Multiply {
+public class Multiply1 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
