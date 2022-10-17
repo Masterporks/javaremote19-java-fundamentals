@@ -1,7 +1,46 @@
 package quiz;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Scanner;
 
+/**
+ * To create a quiz and give the final score
+ * <p>
+ * Quiz should be minimum of 5 questions
+ * For each right answer = 1 point
+ * For each negative answer = 0 points
+ * Finally, you have to display the correct answers for each question and the total score.
+ * Display the Result. PASS OR FAIL?
+ * <p>
+ * <p>
+ * Quiz example:
+ * Display question to user like this
+ * a. What is the capital city of Estonia?
+ * 1. Tallinn
+ * 2. Tartu
+ * 3. Parnu
+ * 4. Viljandi
+ * Enter your answer: 2
+ * Invalid answer, please enter the given option only.
+ * <p>
+ * <p>
+ * b. Wat...?
+ * <p>
+ * <p>
+ * <p>
+ * Total score: 4
+ * The correct answers:
+ * a. Tallinn
+ * b.
+ * <p>
+ * <p>
+ * <p>
+ * <p>
+ * HW:
+ * 1. Display the correct answers for each question
+ * 2. Calculate total score.
+ */
 public class Quiz {
     public static void main(String[] args) {
         System.out.println("This is QUIZ");
@@ -10,41 +49,48 @@ public class Quiz {
         int totalScore = 0;
         int rightAnswer = 1;
         int wrongAnswer = 0;
-        boolean hasPassed = false;
+        boolean hasPassed;
         Question[] questions = getRandomQuestion();
-        Answer[] userAnswers = new Answer[questions.length];
+        Answer[] userAnswers = new Answer[getAnswers().length];  // was Questions.length before
 
 
-        Question question = null;
-        for (int j = 0; j < questions.length; j++) {
-            question = questions[j];
-
-
+        for (int j = 0; j < getAnswers().length; j++) {  // was questions().length before
+            Question question = questions[j];
             System.out.println(question.getDescription());
 
             for (int i = 0; i < question.getOptions().length; i++) {
                 System.out.println(i + ", " + question.getOptions()[i]);
 
-                System.out.println("Choose an option from above");
-                Answer answer = new Answer();
-                answer.setQuestionId(question.getId());
-                answer.setCorrectOption(getAnswerOption(question.getOptions().length));
-                userAnswers[j] = answer;
-
             }
+            System.out.println("Choose an option from above");
+
+
+            //Creating a user answer object and assign it to the userAnswer array
+            Answer answer = new Answer();
+            answer.setQuestionId(question.getId());
+            answer.setCorrectOption(getAnswerOption(question.getOptions().length));
+            userAnswers[j] = answer;
+
+
+
+
+
         }
+
         Answer[] correctAnswers = getAnswers();
 
-        //Compare answerOptions of CorrectAnswer and the userAnswer
-        for (int i = 0; i < correctAnswers.length; i++) {
-            for (int j = 0; j < userAnswers.length; j++)
-                if (correctAnswers[i].getQuestionId() == userAnswers[j].getQuestionId() && correctAnswers[i].getCorrectOption() == userAnswers[j].getCorrectOption()) {
+        //Total Score Calculation: Compare answerOptions of CorrectAnswer and the userAnswer
+        for (Answer userAnswer : userAnswers) {
+            for (Answer correctAnswer : correctAnswers) {
+                if (correctAnswer.getQuestionId() == userAnswer.getQuestionId() && correctAnswer.getCorrectOption() == userAnswer.getCorrectOption()) {
                     totalScore += rightAnswer;
                 }
+            }
 
         }
         System.out.println("total score is " + totalScore);
-        hasPassed = totalScore >= questions.length / 2;
+        //Pass score is 50%
+        hasPassed = totalScore >= (double) questions.length / 2;
         System.out.println(hasPassed ? "PASSED!" : "FAILED");
     }
 
@@ -53,29 +99,31 @@ public class Quiz {
         Question question1 = new Question();
         question1.setId(1L);
         question1.setDescription("What is the capital of Estonia?");
-        question1.setOptions(new String[]{"1. Tartu \n2. Narva \n3. Tallinn \n4. Viljandi"});
+        question1.setOptions(new String[]{"Tartu", "Narva", "Tallinn", "Viljandi"});
 
         Question question2 = new Question();
         question2.setId(2L);
         question2.setDescription("What is Estonia's native language?");
-        question2.setOptions(new String[]{"1. English \n2. Finnish \n3. Russian \n4. Estonian"});
+        question2.setOptions(new String[]{"English", "Finnish", "Russian", "Estonian"});
 
         Question question3 = new Question();
         question3.setId(3L);
         question3.setDescription("Who is The president of Estonia");
-        question2.setOptions(new String[]{"1. Kaja Kallas \n2. Alari Karis\n3. Jüri Ratas \n4. Eminem"});
+        question3.setOptions(new String[]{"Kaja Kallas", "Alari Karis", "Jüri Ratas", "Eminem"});
 
         Question question4 = new Question();
-        question3.setId(3L);
-        question3.setDescription("What is the favourite car in Estonia");
-        question2.setOptions(new String[]{"1. Skoda \n2. AUDI\n3. BMW \n4. BIKE"});
+        question4.setId(4L);
+        question4.setDescription("What is the favourite car in Estonia");
+        question4.setOptions(new String[]{"SKODA", "AUDI", "BMW", "BIKE"});
 
         Question question5 = new Question();
-        question3.setId(3L);
-        question3.setDescription("Who is national bird of Estonia");
-        question2.setOptions(new String[]{"1. Kuldnokk \n2. Tihane\n3. Tuvi \n4. Pääsuke"});
+        question5.setId(5L);
+        question5.setDescription("Who is national bird of Estonia");
+        question5.setOptions(new String[]{"Kuldnokk", "Tihane", "Tuvi", "Pääsuke"});
+
 
         return new Question[]{question1, question2, question3, question4, question5};
+
     }
 
 
@@ -115,21 +163,27 @@ public class Quiz {
 
         int option = limit + 1;
 
+
+
         do {
             if (!scanner.hasNextInt()) {
                 System.out.println(errorMessage);
                 scanner.next();
+
             } else {
                 option = scanner.nextInt(); // correct input
 
                 if (option > limit) {
                     System.out.println(errorMessage);
                 }
+
             }
 
         } while (option > limit);
 
+
         return option;
-    }
 }
+    }
+
 
